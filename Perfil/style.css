@@ -1,0 +1,137 @@
+body {
+    background-color: rgb(40, 40, 40);
+    color: #fff;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    
+}
+
+header {
+    height: 100vh;
+}
+
+.container {
+    width: 70%;
+    height: 70%;
+    margin: 50px auto 0;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-areas: 
+    "hero hero"
+    "side1 side2";
+}
+
+nav {
+    width: 100%;
+    border-bottom: 0.3px solid #fff;
+}
+
+
+.link {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color 0.3s;
+    cursor: pointer;
+    padding: 20px;
+    font-weight: bolder;
+
+}
+.link:hover {
+    color: #8f8f8f;
+}
+
+nav {
+    background-color: #cf4949;
+}
+
+nav ul {
+    list-style: none;
+    height: 70px;
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+    align-items: center;
+}
+.hero img {
+    border-radius: 25% 25% 25% 25% / 47% 0% 25% 0%;
+    width: 250px;
+    box-shadow: 4px 3px  #d67171;
+    
+}
+
+.hero {
+    grid-area: hero;
+    width: 600px;
+    padding: 30px 10px;
+    border: 0.1px solid;
+    border-radius: 7px;
+    display: flex;
+    justify-content: space-around;
+    transition: all .3s;
+}
+
+.hero:hover {
+    color: #000;
+    background-color: #fff;
+    box-shadow: 4px 4px #d67171;
+}
+
+.side {
+    grid-area: side1;
+    width: 200px;
+    border: 0.3px solid;
+    border-radius: 8px;
+    padding: 20px 20px 30px;
+    transition: all .3s;
+}
+
+.side:hover {
+    color: #000;
+    background-color: #fff;
+    box-shadow: 2px 2px #d67171;
+}
+
+.side li {
+    margin-bottom: 10px;
+}
+
+
+
+.side2 {
+    width: 300px;
+    border: 0.3px solid;
+    border-radius: 8px;
+    padding: 20px 20px 30px;
+    grid-area: side2;
+}
+
+@media (max-width:450px) {
+    header {
+        width: 100%;
+        padding-bottom: 50px;
+    }
+    
+    .hero {
+        width: 400px;
+        align-items: center;
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+    .container {
+        place-items: center;
+        justify-content: space-around;
+        grid-template-areas:
+        "hero"
+        "side2"
+        "side1";
+    }
+    .side {
+        margin: 20px 0;
+    }
+}
+
+
